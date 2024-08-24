@@ -15,13 +15,13 @@ jobs:
         needs: [Job5, Job2, Job3]
     Job2:
         runs-on: ubuntu-latest
+        environment:
+            name: Approval team
         steps:
             - run: echo "This is Job 2!"
         needs: [Job5]
     Job3:
         runs-on: ubuntu-latest
-        environment:
-            name: Approval team
         steps:
             - run: echo "This is Job 3!"
             - run: exit 1
