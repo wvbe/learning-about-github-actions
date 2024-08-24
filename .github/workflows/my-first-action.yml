@@ -24,7 +24,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "This is Job 3!"
-            - run: exit 1
+            - run: exit 0
         needs: [Job4]
     Job4:
         runs-on: ubuntu-latest
