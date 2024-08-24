@@ -21,6 +21,7 @@ jobs:
         needs: [Job5]
     Job3:
         runs-on: ubuntu-latest
+        environment: Approval team
         steps:
             - run: echo "This is Job 3!"
             - run: exit 1
