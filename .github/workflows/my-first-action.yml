@@ -22,3 +22,7 @@ jobs:
               run: |
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
+    Do-the-other-thing:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Beep boop!"
