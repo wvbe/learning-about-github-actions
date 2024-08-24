@@ -12,7 +12,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "This is Job 1!"
-        needs: [Job5, Job1]
+        needs: [Job5, Job2]
     Job2:
         runs-on: ubuntu-latest
         steps:
