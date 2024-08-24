@@ -13,7 +13,6 @@ jobs:
         steps:
             - run: echo "This is Job 1!"
         needs: [Job5, Job2, Job3]
-        if: ${{ always() }}
     Job2:
         runs-on: ubuntu-latest
         steps:
@@ -21,7 +20,8 @@ jobs:
         needs: [Job5]
     Job3:
         runs-on: ubuntu-latest
-        environment: Approval team
+        environment:
+            name: Approval team
         steps:
             - run: echo "This is Job 3!"
             - run: exit 1
